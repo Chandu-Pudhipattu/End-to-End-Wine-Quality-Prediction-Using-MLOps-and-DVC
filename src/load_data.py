@@ -7,7 +7,7 @@ import argparse
 def load_and_save(config_path):
     config = read_params(config_path)
     df = get_data(config_path)
-    new_cols = [col.replace(" ","_") for col in df.columns] # list comprahension for avoiding unwanted spaces between columns than cama's 
+    new_cols = [col.replace(" ","_") for col in df.columns] # list comprahension for avoiding unwanted spaces between columns 
     raw_data_path = config["load_data"]["raw_dataset_csv"]
     # print(new_cols)
     df.to_csv(raw_data_path,sep=",",index=False,header=new_cols)
