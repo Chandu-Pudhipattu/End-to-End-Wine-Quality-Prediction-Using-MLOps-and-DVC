@@ -5,15 +5,16 @@ create env
 ```
 
 activate env
-'''bash
-conda activate wineq
-'''
+
+```bash
+  conda activate wineq
+```
 create a requirements.txt
 
 install the req.txt
-'''bash
+```bash
 pip install -r requirements.txt
-'''
+```
 download the data from
 
 https://drive.google.com/drive/folders/18zqQiCJVgF7uzXgfbIJ-04zgz1ItNfF5?usp=sharing
