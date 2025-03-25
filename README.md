@@ -29,3 +29,10 @@ git add .
 
 git commit -m "First Commit"
 
+One liner update for Readme
+```bash
+git add . ; git commit -m "Updated README.md"
+```
+git remote add origin https://github.com/Chandu-Pudhipattu/MLOPS_sample_dvc_app.git
+git branch -M main
+git push -u origin main
