@@ -18,8 +18,8 @@ def read_params(config_path):
     return config 
 
 def predict(data):
-    config = read_params()
-    model_dir_path = config("webapp_model_dir")
+    config = read_params(params_path)
+    model_dir_path = config["webapp_model_dir"]
     model = joblib.load(model_dir_path)
     prediction = model.predict(data)
     print(prediction)
@@ -35,7 +35,6 @@ def api_response(request):
         print(e)
         error = {"error": "Something went wrong! Try again"} 
         return error
-
 
 
 @app.route("/",methods=["GET","POST"])
