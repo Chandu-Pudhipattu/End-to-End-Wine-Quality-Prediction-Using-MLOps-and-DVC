@@ -4,3 +4,4 @@ scikit-learn
 pytest
 tox
 flake8
+gunicorn
