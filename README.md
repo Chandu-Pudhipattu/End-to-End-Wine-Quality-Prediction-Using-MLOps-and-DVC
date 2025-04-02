@@ -70,4 +70,8 @@ python setup.py sdist bdist_wheel
 heroku deployment
 ```
 
+Running on Gunicorn
+```bash
+web: gunicorn app:app
+```
 
