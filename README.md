@@ -74,4 +74,9 @@ Running on Gunicorn
 ```bash
 web: gunicorn app:app
 ```
+procfile should be case sensitive
+```bash
+Procfile
+web gunicorn app:app
+```
 
