@@ -44,9 +44,9 @@ def index():
         try:
             if request.form:
                 data = dict(request.form)
-                data  = [list(map(float, data))]
-                response = prediction.form_response(data)
-                return render_template("index.html",response=response)
+                data_values = [float(v) for v in request.form.values()]
+                response = prediction.form_response(dict(zip(request.form.keys(), data_values)))
+                return render_template("index.html", response=response)
 
             elif request.json:
                 response = prediction.api_response(request.json)
@@ -54,8 +54,8 @@ def index():
 
         except Exception as e:
             print(e)
-            #error = {"error": "Something went wrong! Try again"} 
-            return render_template("404.html",error=e)
+            error = {"error": e} 
+            return render_template("404.html",error=error)
     else:
         return render_template("index.html")
 
