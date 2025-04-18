@@ -1,4 +1,4 @@
-# 🍷 End-to-End Wine Quality Prediction Using MLOps and DVC
+# End-to-End Wine Quality Prediction Using MLOps and DVC
 
 This project implements a complete machine learning pipeline to predict wine quality based on physicochemical tests. It leverages MLOps practices, including data versioning with DVC, experiment tracking, and deployment automation.
 
